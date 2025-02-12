@@ -69,7 +69,7 @@ function Connect() {
           message: "Something went wrong, please try again later.",
         });
       }
-    } catch () {
+    } catch {
       setStatus({
         success: false,
         message: "Failed to send message. Please check your server connection.",
