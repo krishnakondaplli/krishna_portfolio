@@ -69,8 +69,7 @@ function Connect() {
           message: "Something went wrong, please try again later.",
         });
       }
-    } catch (error) {
-      console.error("Error submitting form:", error);
+    } catch () {
       setStatus({
         success: false,
         message: "Failed to send message. Please check your server connection.",
