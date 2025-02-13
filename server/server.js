@@ -75,4 +75,4 @@ router.post("/connect", (req, res) => {
   });
 });
 
-module.exports = app; // Use this for Vercel, Render, or Railway deployment
+export default app; // Use this for Vercel, Render, or Railway deployment
