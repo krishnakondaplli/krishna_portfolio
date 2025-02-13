@@ -43,7 +43,7 @@ function Connect() {
     setButtonText("Sending...");
 
     try {
-      let response = await fetch("http://localhost:5000", {
+      let response = await fetch("http://localhost:5000/connect", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
