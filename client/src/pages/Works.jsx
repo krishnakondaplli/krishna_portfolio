@@ -1,27 +1,31 @@
 import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
+import fastPizza from "../assets/fastPizza.jpeg";
+import quizApp from "../assets/react-quiz-app-image.png";
+import worldwise from "../assets/worldwise.png";
+import wildOasis from "../assets/about-2.jpg";
 
 const works = [
   {
-    imgSrc: "client/public/fastPizza.jpeg",
+    imgSrc: fastPizza,
     title: "The Fast React Pizza",
     technologies: ["HTML", "CSS", "Javascript", "React js"],
     projectLinks: "https://krish-the-fast-react-pizza.netlify.app/",
   },
   {
-    imgSrc: "client/public/react-quiz-app-image.png",
+    imgSrc: quizApp,
     title: "The React Quiz",
     technologies: ["HTML", "CSS", "Javascript", "React js"],
     projectLinks: "https://reactquiiiz.netlify.app/",
   },
   {
-    imgSrc: "client/public/worldwise.png",
+    imgSrc: worldwise,
     title: "The World Wise",
     technologies: ["HTML", "Javascript", "React js", "React Router"],
     projectLinks: "https://worldwiseee.netlify.app/",
   },
   {
-    imgSrc: "client/public/about-2.jpg",
+    imgSrc: wildOasis,
     title: "The Wild Oasis",
     technologies: ["HTML", "Javascript", "React js", "Tailwind CSS"],
     projectLinks: "https://krish-the-wild-oasis.netlify.app/dashboard",

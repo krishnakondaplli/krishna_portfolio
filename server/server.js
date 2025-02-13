@@ -18,6 +18,11 @@ app.use("/", router);
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server Running on port ${PORT}`));
 
+// Root route
+app.get("/", (req, res) => {
+  res.send("Server running");
+});
+
 // ✅ **GET `/connect` → Show stored data**
 router.get("/connect", (req, res) => {
   res.status(200).json({ message: "Form submissions:", data: submittedData });

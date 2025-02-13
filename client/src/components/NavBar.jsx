@@ -25,9 +25,9 @@ function NavBar() {
         className="pl-3  hover:cursor-pointer"
         onClick={(e) => handleScroll(e, "home", "/")}
       >
-        <p className="">Krishna&apos;s Portfolio</p>
+        <p className="">Krishna Portfolio</p>
       </div>
-      <div className="">
+      <div>
         <ul className="list-none flex space-x-4 justify-end">
           {[
             { name: "Home", to: "/", targetId: "home" },
