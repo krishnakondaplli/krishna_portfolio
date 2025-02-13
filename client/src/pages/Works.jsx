@@ -3,25 +3,25 @@ import ProjectCard from "../components/ProjectCard";
 
 const works = [
   {
-    imgSrc: "/public/fastPizza.jpeg",
+    imgSrc: "client/public/fastPizza.jpeg",
     title: "The Fast React Pizza",
     technologies: ["HTML", "CSS", "Javascript", "React js"],
     projectLinks: "https://krish-the-fast-react-pizza.netlify.app/",
   },
   {
-    imgSrc: "/public/react-quiz-app-image.png",
+    imgSrc: "client/public/react-quiz-app-image.png",
     title: "The React Quiz",
     technologies: ["HTML", "CSS", "Javascript", "React js"],
     projectLinks: "https://reactquiiiz.netlify.app/",
   },
   {
-    imgSrc: "/public/worldwise.png",
+    imgSrc: "client/public/worldwise.png",
     title: "The World Wise",
     technologies: ["HTML", "Javascript", "React js", "React Router"],
     projectLinks: "https://worldwiseee.netlify.app/",
   },
   {
-    imgSrc: "/public/about-2.jpg",
+    imgSrc: "client/public/about-2.jpg",
     title: "The Wild Oasis",
     technologies: ["HTML", "Javascript", "React js", "Tailwind CSS"],
     projectLinks: "https://krish-the-wild-oasis.netlify.app/dashboard",
