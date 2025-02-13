@@ -1,35 +1,34 @@
 import express from "express";
 import cors from "cors";
 import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 const router = express.Router();
-const submittedData = []; // Array to store submitted form data
+const submittedData = []; // Store submitted form data
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
 
-// Root route
-router.get("/", (req, res) => {
-  res.send("Server running");
-});
+// Dynamic port for deployment
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server Running on port ${PORT}`));
 
-// `/connect` route to show submitted form data
+// ✅ **GET `/connect` → Show stored data**
 router.get("/connect", (req, res) => {
   res.status(200).json({ message: "Form submissions:", data: submittedData });
 });
 
-// Start the server
-app.listen(5000, () => console.log("Server Running on port 5000"));
-
-// Nodemailer transporter setup
+// ✅ **Nodemailer setup**
 const contactEmail = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "yourskrish840@gmail.com",
-    pass: "tuwm kcrw dfxn dfoq", // Use environment variables instead
+    user: process.env.EMAIL_USER, // Use environment variables
+    pass: process.env.EMAIL_PASS,
   },
 });
 
@@ -42,18 +41,18 @@ contactEmail.verify((error) => {
   }
 });
 
-// `/contact` route to receive form data
+// ✅ **POST `/connect` → Save data & Send Email**
 router.post("/connect", (req, res) => {
   const { firstName, lastName, email, message, phone } = req.body;
   const name = `${firstName} ${lastName}`;
 
-  // Store submitted form data in the array
+  // Store form data
   const formData = { name, email, phone, message };
   submittedData.push(formData);
 
   const mail = {
     from: name,
-    to: "********@gmail.com", // Replace with recipient email
+    to: "yourreceiver@gmail.com", // Replace with recipient email
     subject: "Contact Form Submission - Portfolio",
     html: `
       <p><strong>Name:</strong> ${name}</p>
@@ -65,15 +64,15 @@ router.post("/connect", (req, res) => {
 
   contactEmail.sendMail(mail, (error) => {
     if (error) {
-      res
+      return res
         .status(500)
         .json({ code: 500, status: "Error Sending Message", error });
-    } else {
-      res
-        .status(200)
-        .json({ code: 200, status: "Message Sent", submittedData: formData });
     }
+
+    return res
+      .status(200)
+      .json({ code: 200, status: "Message Sent", submittedData: formData });
   });
 });
 
-export default app;
+module.exports = app; // Use this for Vercel, Render, or Railway deployment
