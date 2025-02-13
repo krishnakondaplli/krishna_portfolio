@@ -1,6 +1,6 @@
 import About from "./About";
 import Blog from "./Blog";
-import Works from "./works";
+import Works from "./Works.js";
 import ArrowDown from "../icons/ArrowDown.jsx";
 import Contact from "./Connect.jsx";
 import { NavLink } from "react-router-dom";
