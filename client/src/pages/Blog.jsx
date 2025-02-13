@@ -101,14 +101,16 @@ export default function Blog() {
       id="blog"
       className="max-w-4xl mx-auto p-4 sm:p-6 space-y-4 sm:space-y-6"
     >
-      <h1 className="text-2xl sm:text-3xl font-bold text-center">Tech Blog</h1>
+      <h1 className="text-2xl mt-24 sm:text-3xl font-bold text-center">
+        Tech Blog
+      </h1>
       {topics.map((topic, index) => (
         <motion.div
           key={index}
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -200 }}
           transition={{ duration: 0.9, delay: 0.5 }}
-          className="bg-black/15"
+          className="bg-black/15 "
         >
           <Card className="p-3 sm:p-4 bg-black/10 shadow-lg rounded-xl sm:rounded-2xl">
             <CardContent className="bg-black/10">

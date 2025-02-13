@@ -12,6 +12,13 @@ export default {
       animation: {
         "move-left": "move-left 90s linear infinite",
       },
+      screens: {
+        xs: "344px", // Custom small screen (344px)
+        "xs-lg": "499px", // Custom breakpoint (499px)
+      },
+      spacing: {
+        "-25rem": "-25rem", // Custom negative margin
+      },
     },
   },
   plugins: [],

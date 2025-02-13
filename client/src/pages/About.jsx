@@ -5,9 +5,9 @@ function About() {
   return (
     <section
       id="about"
-      className="flex justify-center items-center min-h-screen p-6 md:p-12"
+      className="flex justify-center items-center min-h-screen p-6 mb-[1rem] md:p-12"
     >
-      <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-6xl gap-6 md:gap-12">
+      <div className="flex flex-col mt-20 md:flex-row justify-center items-center w-full max-w-6xl gap-6 md:gap-12">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -80 }}

@@ -20,14 +20,14 @@ function NavBar() {
   };
 
   return (
-    <nav className="fixed top-0 w-full text-slate-100 font-bold z-10 backdrop-blur-2xl border border-white/10 pt-6 pr-14 pb-9 flex justify-between scroll-smooth shadow-2xl bg-slate-800/10">
+    <nav className="fixed top-0 w-full text-lg sm:text-base xs:text-sm font-bold z-10 backdrop-blur-2xl border border-white/10 pt-6 pr-14 pb-9 flex justify-between scroll-smooth shadow-2xl bg-slate-800/10">
       <div
-        className="pl-3 hover:cursor-pointer"
+        className="pl-3  hover:cursor-pointer"
         onClick={(e) => handleScroll(e, "home", "/")}
       >
-        <p>Krishna&apos;s Portfolio</p>
+        <p className="">Krishna&apos;s Portfolio</p>
       </div>
-      <div>
+      <div className="">
         <ul className="list-none flex space-x-4 justify-end">
           {[
             { name: "Home", to: "/", targetId: "home" },
