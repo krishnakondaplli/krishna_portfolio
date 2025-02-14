@@ -43,13 +43,16 @@ function Connect() {
     setButtonText("Sending...");
 
     try {
-      let response = await fetch("http://localhost:5000/connect", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(formDetails),
-      });
+      let response = await fetch(
+        "https://krishna-portfolio-server-henna.vercel.app/connect",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json;charset=utf-8",
+          },
+          body: JSON.stringify(formDetails),
+        }
+      );
 
       setButtonText("Send");
 
