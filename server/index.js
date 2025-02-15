@@ -1,16 +1,19 @@
 import express from "express";
 import cors from "cors";
 import nodemailer from "nodemailer";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 const app = express();
 const router = express.Router();
 const submittedData = []; // Store submitted form data
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://krishnaportfolio-henna.vercel.app/", // Replace with your frontend URL
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use("/", router);
 
@@ -46,7 +49,7 @@ contactEmail.verify((error) => {
   }
 });
 
-// ✅ **POST `/connect` → Save data & Send Email**
+// Contact route
 router.post("/connect", (req, res) => {
   const { firstName, lastName, email, message, phone } = req.body;
   const name = `${firstName} ${lastName}`;
@@ -57,7 +60,7 @@ router.post("/connect", (req, res) => {
 
   const mail = {
     from: name,
-    to: "yourreceiver@gmail.com", // Replace with recipient email
+    to: "********@gmail.com", // Replace with recipient email
     subject: "Contact Form Submission - Portfolio",
     html: `
       <p><strong>Name:</strong> ${name}</p>
@@ -69,15 +72,15 @@ router.post("/connect", (req, res) => {
 
   contactEmail.sendMail(mail, (error) => {
     if (error) {
-      return res
+      res
         .status(500)
         .json({ code: 500, status: "Error Sending Message", error });
+    } else {
+      res
+        .status(200)
+        .json({ code: 200, status: "Message Sent", submittedData: formData });
     }
-
-    return res
-      .status(200)
-      .json({ code: 200, status: "Message Sent", submittedData: formData });
   });
 });
 
-export default app; // Use this for Vercel, Render, or Railway deployment
+export default app;
