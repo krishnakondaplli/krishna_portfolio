@@ -7,13 +7,7 @@ const router = express.Router();
 const submittedData = []; // Store submitted form data
 
 // Middleware
-app.use(
-  cors({
-    origin: "https://krishnaportfolio-henna.vercel.app/", // Replace with your frontend URL
-    methods: ["GET", "POST"],
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.json());
 app.use("/", router);
 
