@@ -107,8 +107,15 @@ function Footer() {
             initial="initial"
             animate="animate"
             variants={iconVariants(4)}
+            className="rounded-full"
           >
-            <FaTwitter className="text-blue-400 text-3xl hover:text-blue-600 transition" />
+            <img
+              width="40"
+              height="40"
+              src="https://img.icons8.com/color/48/twitterx--v1.png"
+              alt="twitterx--v1"
+            />
+            {/* <FaTwitter className="text-blue-400 text-3xl hover:text-blue-600 transition" /> */}
           </motion.a>
         </motion.div>
 

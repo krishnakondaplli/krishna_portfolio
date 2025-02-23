@@ -30,7 +30,7 @@ function Home() {
     }
   };
   return (
-    <section id="home" className="relative w-full overflow-hidden">
+    <section id="home" className="relative w-full  overflow-hidden">
       {/* Half Sphere */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[50rem] h-[50rem] md:w-[70rem] md:h-[75rem] sm:w-[50rem] sm:h-[55rem] bg-gradient-to-b from-indigo-900 to-cyan-900/5 rounded-full z-0 blur-lg "></div>
 

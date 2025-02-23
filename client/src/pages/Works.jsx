@@ -18,18 +18,18 @@ const works = [
     technologies: ["HTML", "CSS", "Javascript", "React js"],
     projectLinks: "https://reactquiiiz.netlify.app/",
   },
-  {
-    imgSrc: worldwise,
-    title: "The World Wise",
-    technologies: ["HTML", "Javascript", "React js", "React Router"],
-    projectLinks: "https://worldwiseee.netlify.app/",
-  },
-  {
-    imgSrc: wildOasis,
-    title: "The Wild Oasis",
-    technologies: ["HTML", "Javascript", "React js", "Tailwind CSS"],
-    projectLinks: "https://krish-the-wild-oasis.netlify.app/dashboard",
-  },
+  // {
+  //   imgSrc: worldwise,
+  //   title: "The World Wise",
+  //   technologies: ["HTML", "Javascript", "React js", "React Router"],
+  //   projectLinks: "https://worldwiseee.netlify.app/",
+  // },
+  // {
+  //   imgSrc: wildOasis,
+  //   title: "The Wild Oasis",
+  //   technologies: ["HTML", "Javascript", "React js", "Tailwind CSS"],
+  //   projectLinks: "https://krish-the-wild-oasis.netlify.app/dashboard",
+  // },
 ];
 
 function Works() {
