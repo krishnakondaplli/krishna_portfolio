@@ -34,7 +34,7 @@ function Home() {
       {/* Half Sphere */}
       <div className='absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[50rem] h-[50rem] md:w-[70rem] md:h-[75rem] sm:w-[50rem] sm:h-[55rem] bg-gradient-to-b from-indigo-900 to-cyan-900/5 rounded-full z-0 blur-lg '></div>
 
-      <motion.div className='h-[25rem]   lg:mt-32 sm:mt-0 p-6 md:p-12 pt-24 relative flex flex-col items-center text-center'>
+      <motion.div className='max-h-screen   lg:mt-32 sm:mt-0 p-6 md:p-12 pt-24 relative flex flex-col items-center text-center'>
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 0.9, y: 0 }}
